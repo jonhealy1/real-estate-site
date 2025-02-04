@@ -1,5 +1,11 @@
 import "@/assets/styles/globals.css";
 
+export const metadata = {
+  title: "Property Plus",
+  keywords: "real estate, property, rental",
+  description: "Real estate and property rental",
+};
+
 const MainLayout = ({ children }) => {
   return (
     <html>
