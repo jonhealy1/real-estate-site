@@ -1,21 +1,21 @@
 const Navbar = () => {
   return (
-    <nav class="bg-blue-700 border-b border-blue-500">
-      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-20 items-center justify-between">
-          <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
+    <nav className="bg-blue-700 border-b border-blue-500">
+      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div className="relative flex h-20 items-center justify-between">
+          <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
             {/* <!-- Mobile menu button--> */}
             <button
               type="button"
               id="mobile-dropdown-button"
-              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open main menu</span>
+              <span className="absolute -inset-0.5"></span>
+              <span className="sr-only">Open main menu</span>
               <svg
-                class="block h-6 w-6"
+                className="block h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
@@ -31,37 +31,37 @@ const Navbar = () => {
             </button>
           </div>
 
-          <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+          <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
             {/* <!-- Logo --> */}
-            <a class="flex flex-shrink-0 items-center" href="/index.html">
+            <a className="flex flex-shrink-0 items-center" href="/index.html">
               <img
-                class="h-10 w-auto"
+                className="h-10 w-auto"
                 src="images/logo-white.png"
                 alt="PropertyPulse"
               />
 
-              <span class="hidden md:block text-white text-2xl font-bold ml-2">
+              <span className="hidden md:block text-white text-2xl font-bold ml-2">
                 PropertyPulse
               </span>
             </a>
             {/* <!-- Desktop Menu Hidden below md screens --> */}
-            <div class="hidden md:ml-6 md:block">
-              <div class="flex space-x-2">
+            <div className="hidden md:ml-6 md:block">
+              <div className="flex space-x-2">
                 <a
                   href="/index.html"
-                  class="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+                  className="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                 >
                   Home
                 </a>
                 <a
                   href="/properties.html"
-                  class="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+                  className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                 >
                   Properties
                 </a>
                 <a
                   href="/add-property.html"
-                  class="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+                  className="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
                 >
                   Add Property
                 </a>
@@ -70,26 +70,26 @@ const Navbar = () => {
           </div>
 
           {/* <!-- Right Side Menu (Logged Out) --> */}
-          <div class="hidden md:block md:ml-6">
-            <div class="flex items-center">
-              <button class="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2">
-                <i class="fa-brands fa-google text-white mr-2"></i>
+          <div className="hidden md:block md:ml-6">
+            <div className="flex items-center">
+              <button className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2">
+                <i className="fa-brands fa-google text-white mr-2"></i>
                 <span>Login or Register</span>
               </button>
             </div>
           </div>
 
           {/* <!-- Right Side Menu (Logged In) --> */}
-          <div class="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
-            <a href="messages.html" class="relative group">
+          <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+            <a href="messages.html" className="relative group">
               <button
                 type="button"
-                class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               >
-                <span class="absolute -inset-1.5"></span>
-                <span class="sr-only">View notifications</span>
+                <span className="absolute -inset-1.5"></span>
+                <span className="sr-only">View notifications</span>
                 <svg
-                  class="h-6 w-6"
+                  className="h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
@@ -103,25 +103,25 @@ const Navbar = () => {
                   />
                 </svg>
               </button>
-              <span class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+              <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
                 2
                 {/* <!-- Replace with the actual number of notifications --> */}
               </span>
             </a>
             {/* <!-- Profile dropdown button --> */}
-            <div class="relative ml-3">
+            <div className="relative ml-3">
               <div>
                 <button
                   type="button"
-                  class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   id="user-menu-button"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
-                  <span class="absolute -inset-1.5"></span>
-                  <span class="sr-only">Open user menu</span>
+                  <span className="absolute -inset-1.5"></span>
+                  <span className="sr-only">Open user menu</span>
                   <img
-                    class="h-8 w-8 rounded-full"
+                    className="h-8 w-8 rounded-full"
                     src="/images/profile.png"
                     alt=""
                   />
@@ -131,7 +131,7 @@ const Navbar = () => {
               {/* <!-- Profile dropdown --> */}
               <div
                 id="user-menu"
-                class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                className="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="user-menu-button"
@@ -139,7 +139,7 @@ const Navbar = () => {
               >
                 <a
                   href="/profile.html"
-                  class="block px-4 py-2 text-sm text-gray-700"
+                  className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
                   tabindex="-1"
                   id="user-menu-item-0"
@@ -148,7 +148,7 @@ const Navbar = () => {
                 </a>
                 <a
                   href="/saved-properties.html"
-                  class="block px-4 py-2 text-sm text-gray-700"
+                  className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
                   tabindex="-1"
                   id="user-menu-item-2"
@@ -156,7 +156,7 @@ const Navbar = () => {
                   Saved Properties
                 </a>
                 <button
-                  class="block px-4 py-2 text-sm text-gray-700"
+                  className="block px-4 py-2 text-sm text-gray-700"
                   role="menuitem"
                   tabindex="-1"
                   id="user-menu-item-2"
@@ -170,28 +170,28 @@ const Navbar = () => {
       </div>
 
       {/* <!-- Mobile menu, show/hide based on menu state. --> */}
-      <div class="hidden" id="mobile-menu">
-        <div class="space-y-1 px-2 pb-3 pt-2">
+      <div className="hidden" id="mobile-menu">
+        <div className="space-y-1 px-2 pb-3 pt-2">
           <a
             href="/index.html"
-            class="bg-black text-white block rounded-md px-3 py-2 text-base font-medium"
+            className="bg-black text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Home
           </a>
           <a
             href="/properties.html"
-            class="text-white block rounded-md px-3 py-2 text-base font-medium"
+            className="text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Properties
           </a>
           <a
             href="/add-property.html"
-            class="text-white block rounded-md px-3 py-2 text-base font-medium"
+            className="text-white block rounded-md px-3 py-2 text-base font-medium"
           >
             Add Property
           </a>
-          <button class="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-5">
-            <i class="fa-brands fa-google mr-2"></i>
+          <button className="flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2 my-5">
+            <i className="fa-brands fa-google mr-2"></i>
             <span>Login or Register</span>
           </button>
         </div>
