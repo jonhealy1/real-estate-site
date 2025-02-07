@@ -1,4 +1,4 @@
-import Images from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import {FaBed, FaBath, FaRuler, FaMoneyBill, FaMapMarker} from "react-icons/fa";
 
@@ -6,9 +6,12 @@ import {FaBed, FaBath, FaRuler, FaMoneyBill, FaMapMarker} from "react-icons/fa";
 const PropertyCard = ({ property }) => {
     return (
         <div className="rounded-xl shadow-md relative">
-            <img
-              src="images/properties/a1.jpg"
+            <Image
+              src={`/images/properties/${property.images[0]}`}
               alt=""
+              width="0"
+              height="0"
+              sizes="100vw"
               className="w-full h-auto rounded-t-xl"
             />
             <div className="p-4">
