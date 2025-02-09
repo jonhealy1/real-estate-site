@@ -1,8 +1,12 @@
-import properties from "@/properties.json";
 import PropertyCard from "./PropertyCard";
+import connectDB from "@/config/database";
+import Property from "@/models/Property";
 import Link from "next/link";
 
-const HomeProperties = () => {
+const HomeProperties = async () => {
+  await connectDB();
+  const properties = await Property.find({}).lean();
+
   const recentProperties = properties.slice(0, 3);
   return (
     <>
