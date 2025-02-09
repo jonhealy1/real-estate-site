@@ -5,9 +5,10 @@ import Link from "next/link";
 
 const HomeProperties = async () => {
   await connectDB();
-  const properties = await Property.find({}).lean();
-
-  const recentProperties = properties.slice(0, 3);
+  const properties = await Property.find({})
+    .sort({ createdAt: -1 })
+    .limit(3)
+    .lean();
   return (
     <>
       <section className="px-4 py-6">
@@ -19,7 +20,7 @@ const HomeProperties = async () => {
             <p>No properties found</p>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {recentProperties.map((property) => (
+              {properties.map((property) => (
                 <PropertyCard key={property._id} property={property} />
               ))}
             </div>
