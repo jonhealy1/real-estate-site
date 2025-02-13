@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "@/assets/styles/globals.css";
+import AuthProvider from "@/components/AuthProvider";
 
 export const metadata = {
   title: "Property Plus",
@@ -10,6 +11,7 @@ export const metadata = {
 
 const MainLayout = ({ children }) => {
   return (
+    <AuthProvider>
     <html>
       <body className="font-sans">
         <Navbar />
@@ -17,6 +19,7 @@ const MainLayout = ({ children }) => {
         <Footer />
       </body>
     </html>
+    </AuthProvider>
   );
 };
 
