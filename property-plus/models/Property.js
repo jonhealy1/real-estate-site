@@ -18,18 +18,19 @@ const PropertySchema = new Schema(
     description: {
       type: String,
     },
-    image: {
-      type: String,
-    },
-    price: {
-      type: Number,
-      required: true,
-    },
     location: {
-      street: String,
-      city: String,
-      state: String,
-      zipcode: String,
+      street: {
+        type: String,
+      },
+      city: {
+        type: String,
+      },
+      state: {
+        type: String,
+      },
+      zipcode: {
+        type: String,
+      },
     },
     beds: {
       type: Number,
@@ -49,20 +50,36 @@ const PropertySchema = new Schema(
       },
     ],
     rates: {
-      nightly: Number,
-      weekly: Number,
-      monthly: Number,
+      nightly: {
+        type: Number,
+      },
+      weekly: {
+        type: Number,
+      },
+      monthly: {
+        type: Number,
+      },
     },
     seller_info: {
-      name: String,
-      phone: String,
-      email: String,
-    },
-    images: [
-      {
+      name: {
         type: String,
       },
-    ],
+      email: {
+        type: String,
+      },
+      phone: {
+        type: String,
+      },
+    },
+    // NOTE: Limit the user to a maximum of 4 images
+    images: {
+      type: [String],
+      validate: {
+        validator: (v) => v.length <= 4,
+        message: (props) =>
+          `The images array can contain a maximum of 4 images, but got ${props.value.length}`,
+      },
+    },
     is_featured: {
       type: Boolean,
       default: false,
